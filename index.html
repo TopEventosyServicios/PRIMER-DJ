@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11100f">
+  <meta name="description" content="Entra en la cabina de Cotillón 26/27 y descubre el primer DJ de Nochevieja.">
+  <title>Los DJs de la noche · Cotillón 26/27</title>
+  <link rel="stylesheet" href="estilo.css">
+  <script src="musica.js" defer></script>
+  <script src="cabina.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="masthead">
+      <span class="brand"><i aria-hidden="true">✦</i> TOP EVENTOS</span>
+      <span>NOCHEVIEJA <b>26 / 27</b></span>
+    </header>
+    <section class="intro" aria-labelledby="title">
+      <p class="eyebrow"><span></span> DESDE LA CABINA <span></span></p>
+      <h1 id="title">Los DJs <em>de la noche</em></h1>
+      <p class="instruction">Sube el volumen y descubre quién abre el cartel.</p>
+    </section>
+
+    <section class="console" data-phase="ready" aria-label="Mesa de DJ interactiva">
+      <div class="console-header">
+        <span class="console-mark"><b>C</b>OTILLÓN <em>26/27</em></span>
+        <span class="console-status"><i aria-hidden="true"></i><span id="display">EN ESPERA</span></span>
+      </div>
+      <div class="hardware">
+        <section class="deck deck-a" aria-label="Plato A">
+          <div class="deck-id"><b>A</b> <span>PLATO 01</span></div>
+          <div class="platter">
+            <div class="record" id="record-a">
+              <div class="grooves"></div>
+              <div class="label label-a">
+                <span class="label-print"><b>✦</b><small>COTILLÓN</small></span>
+                <img class="portrait" src="manuel-pallares-foto.jpg" alt="Retrato de Manuel Pallarés" aria-hidden="true">
+              </div>
+            </div>
+          </div>
+          <div class="deck-footer" aria-hidden="true">
+            <span class="deck-light"><i></i><i></i><i></i></span><span class="vinyl-speed">33⅓ RPM</span>
+          </div>
+        </section>
+        <section class="mixer" aria-label="Controles de mezcla">
+          <div class="mixer-mark" aria-hidden="true"><i></i> MIX <i></i></div>
+          <div class="channels">
+            <div class="channel master">
+              <label for="volume">VOL<span class="long">UMEN</span></label>
+              <div class="slot" style="--level:0%">
+                <input id="volume" type="range" min="0" max="100" value="0" aria-label="Volumen">
+              </div>
+              <output id="volume-value" for="volume">0</output>
+            </div>
+            <div class="channel bass">
+              <label for="bass">BASS</label>
+              <div class="slot" style="--level:50%">
+                <input id="bass" type="range" min="0" max="100" value="50" aria-label="Graves">
+              </div>
+              <output id="bass-value" for="bass">50</output>
+            </div>
+          </div>
+          <div class="meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </section>
+        <section class="deck deck-b" aria-label="Plato B">
+          <div class="deck-id"><b>B</b> <span>PLATO 02</span></div>
+          <div class="platter">
+            <div class="record" id="record-b">
+              <div class="grooves"></div>
+              <div class="label label-b">
+                <span class="label-print"><b>✦</b><small>COTILLÓN</small></span>
+                <img class="deck-logo" src="manuel-pallares-logo.jpg" alt="Logotipo de Manuel Pallarés" aria-hidden="true">
+              </div>
+            </div>
+          </div>
+          <div class="deck-footer" aria-hidden="true">
+            <span class="deck-light"><i></i><i></i><i></i></span><span class="vinyl-speed">33⅓ RPM</span>
+          </div>
+        </section>
+      </div>
+      <div class="console-footer"><span>●&nbsp; MESA 01</span><span>COTILLÓN SERIES</span></div>
+    </section>
+
+    <section class="stage" aria-label="Presentación del DJ">
+      <div id="start-panel" class="start-panel">
+        <button class="play" id="play" type="button"><span class="play-icon" aria-hidden="true">▶</span><span id="play-text">Empezar la mezcla</span></button>
+        <p id="mix-hint">También puedes subir el fader de volumen para empezar.</p>
+      </div>
+      <div class="artist" id="artist" hidden>
+        <div class="artist-index" aria-hidden="true">01</div>
+        <div class="artist-name">
+          <p class="eyebrow">PRIMER DJ CONFIRMADO</p>
+          <h2>Manuel Pallarés</h2>
+        </div>
+      </div>
+      <p class="sr-only" id="announcement" role="status"></p>
+      <p class="sound-status" id="sound-status" role="status" hidden></p>
+      <div class="replay-controls" id="replay-controls" hidden>
+        <button type="button" id="mute" aria-pressed="false">Silenciar</button>
+        <button type="button" id="replay"><span aria-hidden="true">↻</span> Repetir mezcla</button>
+      </div>
+    </section>
+    <footer class="credits"><span>COTILLÓN 26/27</span><span>✦</span><span>TOP EVENTOS</span></footer>
+  </main>
+</body>
+</html>
